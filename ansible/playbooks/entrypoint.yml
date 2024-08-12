@@ -1,0 +1,13 @@
+- name: Update specified packages
+  hosts: all
+  become: true
+  tasks:
+    - name: Install packages
+      ansible.builtin.apt:
+        name:
+          - gnupg
+          - logrotate
+          - curl
+          - nano
+        state: latest
+        update_cache: yes
