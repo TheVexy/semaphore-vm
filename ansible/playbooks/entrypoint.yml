@@ -2,7 +2,7 @@
   hosts: all
   become: true
   tasks:
-    - name: Install packages
+    - name: Install packages updated
       ansible.builtin.apt:
         name:
           - gnupg
